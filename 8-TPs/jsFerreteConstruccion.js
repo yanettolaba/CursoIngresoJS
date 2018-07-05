@@ -34,10 +34,18 @@ function Materiales ()
 {   var largo;
     var ancho;
     var areaRectangulo;
-    var materialNecesario;
+    var materialCementoPorMetro;
+    var materialCalPorMetro;
+    var CementoPorAreaRectangular;
+    var CalPorAreaRectangular;
     largo = document.getElementById("Largo").value;
     ancho = document.getElementById("Ancho").value;
 	largo = parseInt(largo);
     ancho = parseInt(ancho);
-    areaRectangulo = ;
+    areaRectangulo = largo * ancho;
+    materialCementoPorMetro = 2;
+    materialCalPorMetro = 3,
+    CementoPorAreaRectangular = materialCementoPorMetro * areaRectangulo;
+    CalPorAreaRectangular = materialCalPorMetro * areaRectangulo;
+    alert("se necesita:" +CementoPorAreaRectangular+ "de cemento y " + CalPorAreaRectangular+ "de cal");
 }
