@@ -8,7 +8,59 @@ E.	Si el importe final con descuento suma más de $120  se debe sumar un 10% de 
  ”Usted pago X de IIBB.”, siendo X el impuesto que se pagó. 
 
  */
-function CalcularPrecio () 
-{
- 	
+function CalcularPrecio () {
+
+    var precio;
+    var cantidad;
+    var marca;
+    var precioLamparas;
+    var precioConDescuento;
+    var importeTotal;
+    var impuesto;
+
+    precio = 35;
+    cantidad = document.getElementById("Cantidad").value;
+    cantidad = parseInt(cantidad);
+    marca = document.getElementById("Marca").value;
+    precioLamparas = precio * cantidad;
+
+    if (cantidad >5){
+        precioConDescuento = precioLamparas * 0.5;
+    } else if ( cantidad ==5 && marca == "ArgentinaLuz"){
+        precioConDescuento = precioLamparas * 0.6;
+    } else if (cantidad == 5){
+        precioConDescuento = precioLamparas * 0.7;
+    } else if (cantidad = 4 &&(marca == "ArgentinaLuz" || marca == "FelipeLamparas") ) {
+        precioConDescuento = precioLamparas * 0.75;
+    } else if (cantidad == 4){
+        precioConDesceunto = precioLamparas * 0.8;
+    } else if (cantidad == 3){
+        if( marca == "ArgentinaLuz"){
+            precioConDescuento = precioLamparas * 0.85;
+        } else if (marca == "FelipeLamparas"){
+            precioConDescuento = precioLamparas * 0.90;
+        } else if {
+            if cantidad = 
+            precioConDescuento = precioLamparas * 0.95;
+        } else if (cantidad <3){
+            precioConDescuento = precioLamparas * 1;
+        }
+    }  
+
+    if (precioConDescuento >120){
+        impuesto = precioConDescuento *10/100;
+        importeTotal = precioConDescuento + impuesto;
+    } else {
+        impuesto == 0;
+        importeTotal = precioConDescuento + impuesto;
+    }
+    
+    document.getElementById("precioDescuento").value = precioConDescuento;
+
+    alert("usted pago " +importeTotal+ " de importe toltal, siendo " + impuesto+ "el impuesto");
+
+
+
+
 }
+   
