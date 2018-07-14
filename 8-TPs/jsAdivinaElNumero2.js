@@ -13,38 +13,53 @@ var numeroSecreto;
 var contadorIntentos;
 var mensaje;
 var numero;
-var contador = 0;
 
 function comenzar()
 {
 	//Genero el número RANDOM entre 1 y 100
 	numeroSecreto = Math.floor(Math.random()* (101-1))+1;
 	console.log(numeroSecreto);
-	contador = 0;	 
+	contadorIntentos = 0;	 
 	
 
 }
 
 function verificar()
-{	numero = document.getElementById("numero").value;
-	contadorIntentos = contador++;
-	if (numero == numeroSecreto && contadorIntentos ==1) {
-		mensaje = "usted es un psíquico";
-	} else if (contadorIntentos == 2) {
-		mensaje = "excelente percepción";
-	} else if (contadorIntentos == 3) {
-		mensaje = "Esto es suerte";
-	} else if (contadorIntentos == 4) {
-		mensaje = "Excelente técnina";
-	} else if (contadorIntentos == 5){
-		mensaje = "usted está en la media";
-	} else if (contadorIntentos >7 && contadorIntentos <11) {
-		mensaje = "falta técnica";
-	} else if (contadorIntentos >10) {
-		mensaje = "afortunado en el amor";
+{	
+	numero = document.getElementById("numero").value;
+	contadorIntentos = contadorIntentos +1;
+
+	if (numero == numeroSecreto && contadorIntentos ==1) 
+	{
+		alert("usted es un psíquico");
+	} 
+	else if (numero == numeroSecreto && contadorIntentos == 2) 
+	{
+		alert("excelente percepción");
+	} 
+	else if (numero == numeroSecreto && contadorIntentos == 3) 
+	{
+		alert("Esto es suerte");
+	} 
+	else if (numero == numeroSecreto && contadorIntentos == 4) 
+	{
+		alert("Excelente técnina");
+	} 
+	else if (numero == numeroSecreto && contadorIntentos == 5)
+	{
+		alert("usted está en la media");
+	} 
+	else if ( (numero == numeroSecreto) && (contadorIntentos >=6 && contadorIntentos <11))
+	{
+		alert("falta técnica");
+	} 
+	else if ( (numero == numeroSecreto) && contadorIntentos >10) 
+	{
+		alert("afortunado en el amor");
 	}
+	
 	document.getElementById("intentos").value = contadorIntentos;
-	alert (mensaje);
+
 	
 
 }
