@@ -7,8 +7,16 @@ y una de las cuatro operaciones básicas (suma, resta,
 se debe informar si el resultado es el correcto o no.
 */
 var respuesta;
+var primerNumero;
+var operacion;
+var segundoNumero;
+
 function comenzar()
-{
+{   
+    primerNumero = Math.floor(Math.random()*(11-1))+1;
+    segundoNumero = Math.floor(Math.random()* (11-1))+1;
+    document.getElementById("PrimerNumero").value = primerNumero;
+    document.getElementById("SegundoNumero").value = segundoNumero;
 
 	
 
