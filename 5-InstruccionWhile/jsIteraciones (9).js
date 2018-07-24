@@ -5,13 +5,32 @@ function mostrar()
 	// declarar variables
 	
 	var respuesta='si';
+	var maximo;
+	var minimo;
+	var numero;
+	var bandera= true;
 
-	while(respuesta!='no')
-	{
+	while(respuesta=='si')
+	{	numero = prompt("ingrese un numero");
+		if(bandera){
+		bandera = false;
+		maximo = numero;
+		minimo = numero;
+		console.log(maximo);
+		console.log(minimo);
+	}
+		if (numero >maximo){
+			maximo = numero;
+		}	
+		if (numero <minimo){
+			minimo = numero;
+		}
 		
-	
+	respuesta = prompt("desea ingresar numero?");
 	}
 
+	document.getElementById("maximo").value = maximo;
+	document.getElementById("minimo").value = minimo;
 
 
 
