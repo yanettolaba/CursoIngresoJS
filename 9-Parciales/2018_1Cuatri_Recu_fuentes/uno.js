@@ -2,14 +2,17 @@
 function mostrar()
 {   var base;
     var altura;
-    var perimetro;
     var superficie;
-    base = prompt("ingresar base");
-    altura = prompt("ingresar altura");
+    var perimetro;
+
+    base= prompt("ingrese base");
     base = parseInt(base);
+    altura = prompt("ingrese altura");
     altura = parseInt(altura);
-    perimetro = base *3;
-    superficie = (base*altura)/2;
-    alert("el perimetro del triangulo equilatero es: " + perimetro+ " y su superficie es:" + superficie);
+    superficie = base* altura/2;
+    perimetro = 3 * base;
+
+    alert( "la superficie es " + superficie+ " y el perimetro es "+ perimetro);
+
 
 }
